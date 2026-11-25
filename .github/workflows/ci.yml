@@ -1,9 +1,8 @@
-
 name: Testing
 
 on:
   push:
-    branches: [main, lab3-oop]
+    branches: [main, lab3-oop, lab5-oop2]
   pull_request:
     branches: [main]
 
@@ -23,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pytest fastapi pydantic asteval
+          pip install pytest fastapi pydantic asteval httpx
 
       - name: Run tests
         run: pytest
